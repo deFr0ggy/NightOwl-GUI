@@ -31,13 +31,6 @@ The API keys are required to be in the environment variables. For now only one i
 ABUSEIPDB_API_KEY
 ```
 
-# Upcoming
-
-- [ ] Threat Intelligence (IP/Domains/Emails)
-- [X] Password Protected Attachments 
-- [X] Hash Calculation of Attachments. 
-- [ ] AbuseIPDB data comes in JSON, this has to be parsed and displayed, no redirect. Will take a look into this later.
-
 # In Mission
 
 ![](/Snaps/1.png)
@@ -47,6 +40,13 @@ ABUSEIPDB_API_KEY
 # Updated Mission
 
 ![](/Snaps/3.png)
+
+# Upcoming
+
+- [ ] Threat Intelligence (IP/Domains/Emails)
+- [X] Password Protected Attachments 
+- [X] Hash Calculation of Attachments. 
+- [ ] AbuseIPDB data comes in JSON, this has to be parsed and displayed, no redirect. Will take a look into this later.
 
 # Bugs
 
