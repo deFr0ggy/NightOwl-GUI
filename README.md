@@ -17,20 +17,41 @@ The usage is pretty simple, all you need is to supply a `.EML` or `.MSG` file. T
 7. Emails Addresses (From the body)
 8. URLs (From the body)
 9. Attachments (Name is displayed)
+10. Attachments stored in Passowrd Protected Zip File. 'Password: infected'
+11. MD5, SHA512, SHA256 Calculation. 
+12. AbuseIPDB Integration for validating IP Addresses.
 
 The attachments will be stored in the `/Uploads` folder as well as the uploaded email files. 
 
+# API KEYS
+
+The API keys are required to be in the environment variables. For now only one is required and you should set it on your local machine. 
+
+```
+ABUSEIPDB_API_KEY
+```
+
 # Upcoming
 
-- Threat Intelligence (IP/Domains/Emails)
-- Password Protected Attachments 
-- Hash Calculation of Attachments. 
+- [ ] Threat Intelligence (IP/Domains/Emails)
+- [X] Password Protected Attachments 
+- [X] Hash Calculation of Attachments. 
+- [ ] AbuseIPDB data comes in JSON, this has to be parsed and displayed, no redirect. Will take a look into this later.
 
 # In Mission
 
 ![](/Snaps/1.png)
 
 ![](/Snaps/2.png)
+
+# Updated Mission
+
+![](/Snaps/3.png)
+
+# Bugs
+
+- [ ] Remove the double message from the attachments section.
+- [ ] AbuseIPDB does not works with URLs, so have to integrate. For now, its the same function so thats buggy. 
 
 # Contribute
 
