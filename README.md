@@ -1,6 +1,8 @@
 # NightOwl-GUI
 
-NightOwl-GUI is a Python Flask Application, an upgrade of my NightOwl-CLI which i released a time ago and have been using personally. However, i though to give it a little upgrade. So that, we can work with the email files without the worries of clicking or downloading or executing anything from the email itself. 
+NightOwl-GUI is a Python Flask Application, an upgrade of my NightOwl-CLI which i released 2-3 years ago (https://github.com/deFr0ggy/NightOwl) and have been using in personal capacity. The github one is not that updated as i made a lot of changes to it. 
+
+However, i though to give it a little upgrade. So that, we can work with the email files without the worries of clicking or downloading or executing anything from the email itself. 
 
 This is pretty much a boiler plate for the time being, there is a lot to come to the project and will happen over time. I will be keeping this as an open source project with the sole aim to support he community. 
 
