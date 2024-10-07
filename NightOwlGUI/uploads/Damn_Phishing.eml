@@ -1,116 +1,40 @@
-Delivered-To: kamransaifullah786@gmail.com
-Received: by 2002:a05:6f02:c042:b0:77:acbd:704e with SMTP id z2csp267949rcb;
-        Tue, 1 Oct 2024 08:18:14 -0700 (PDT)
-X-Received: by 2002:a05:600c:3542:b0:42c:b54c:a6d7 with SMTP id 5b1f17b1804b1-42f7137bfc0mr21830105e9.14.1727795894470;
-        Tue, 01 Oct 2024 08:18:14 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1727795894; cv=none;
-        d=google.com; s=arc-20240605;
-        b=Dve6MWaAZL55NsI3vz6DmBGl5z0nXGXYQ/ehuKlzaOz20IRqpr7d3eoKk8ANYHvocS
-         FW/hkGpTerzBxqgbUMBolv9w7m8vblv6Qg/x7Utx2fug19MwV15TbCCKyXPaaw1r7JQx
-         SRoUkYwvsYz/HmyTecWXBFFAYfBNrL2pj7iXhi92GlrjmXRPaHnW/M6lpfQWS384krYC
-         2iJcNPjs42RYVa2hjBCZXBqkyaONNeqixopi/8RxsYKrIikqmZwTtKD3cyO6TFPuW9ue
-         cpnUnf09Zw4DVOzXWVStZwV/AiwhNBhCAUFn7kFhkSIE6zuM1K9GP5hUkRpZ1Rbimjbq
-         ymZQ==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-        h=to:subject:message-id:date:senders_details:from:mime-version
-         :dkim-signature;
-        bh=6nT+dcJ6Aq7z+oxlJjMnkAqNOlH++Jh9DOSl7t13bKs=;
-        fh=HMJrbxNWDekCVXL0trGD4rng7BBfyJKPRXMxKcw9beE=;
-        b=JcW6C3RsoyKmaXMy1WexkmRxMOhR9LsU0nT5Rrzn9k2x7G10wlL+UXpoxEpEM5KfyQ
-         0orZ6kcTPy05zv6DeklOvgkowYwxolyQ02Ra+A2TgfYCheoTwFVD0nB/EI5v7UMaD8oI
-         Q67/fLbL9BDHuaBXYMbOxifBQxTUzV0pUyuJywA2sTJni0gICYv/5Li7b7VKBxAhTST3
-         LjyDW00j0FBFptgvqccWP/FrL/ITBFfDpm7NqT9gW+7OjEr6+Rp3btdafLeP/I/NCbn7
-         L0AIlFlAJ/JyYH34AnomfBX45L06Sd20B5LdAvp4h00zYJNhF3J/qNVWGaIH2fdI0UMJ
-         rIlQ==;
-        dara=google.com
-ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CyBo3BSr;
-       spf=pass (google.com: domain of rayayers740@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rayayers740@gmail.com;
-       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
-       dara=pass header.i=@gmail.com
-Return-Path: <rayayers740@gmail.com>
-Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
-        by mx.google.com with SMTPS id 5b1f17b1804b1-42f57dc9e93sor27178225e9.1.2024.10.01.08.18.14
-        for <kamransaifullah786@gmail.com>
-        (Google Transport Security);
-        Tue, 01 Oct 2024 08:18:14 -0700 (PDT)
-Received-SPF: pass (google.com: domain of rayayers740@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20230601 header.b=CyBo3BSr;
-       spf=pass (google.com: domain of rayayers740@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rayayers740@gmail.com;
-       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
-       dara=pass header.i=@gmail.com
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1727795894; x=1728400694; dara=google.com;
-        h=to:subject:message-id:date:senders_details:from:mime-version:from
-         :to:cc:subject:date:message-id:reply-to;
-        bh=6nT+dcJ6Aq7z+oxlJjMnkAqNOlH++Jh9DOSl7t13bKs=;
-        b=CyBo3BSrDnAEM4fWVEJGAvL14JNI4sZJ/9cMRB/8A/tJH3YfHBYc6U+pNLKaBw7iye
-         12FMvmMh9/aGthjWuHpPtDxvuPT/9tWvTXMRDaw1nv7RTv8SgSb6ZXz6vVfHvQwVrTdx
-         W2Lebl+Eh0ri3SqFE/E2KZUy84LzgfaBO+/XcpER/KSXSW2F2lm8MzrdzTnnpB8AA2pC
-         wNVtSekv/I5M1j4kADrI0rMUkRQh0yDKO5TO1BHBdoTC70r1AapstLbll+bgsVrGL+KP
-         qG7fgB1Uo1QS9HITV5PNa4O6JQhAfCVicQRnfx02GLwLc5dvbGReoDaLNom7rW09F1Oa
-         MKZw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1727795894; x=1728400694;
-        h=to:subject:message-id:date:senders_details:from:mime-version
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=6nT+dcJ6Aq7z+oxlJjMnkAqNOlH++Jh9DOSl7t13bKs=;
-        b=nwJAfR5AZuYLlS7uyPPI6l/H9Iw7bG058AzufRioTN681yXwxIoZizpP6EGxee9RH7
-         uziKvR9BiuzRKCVgskgCLOuHU7WhaZtB9/wVv46/dSL2avuEpr+JI8Iuz+MgjiEmMwWv
-         JVEppHm74KFJUtIrcB/EcHxDkYHEL58ghcesiscjeskNPulwZVN3VfLkzbeGNXdKV4CH
-         P9EXnod4Q8xw9NYjDJkVDSwp5ZmgEFmHzoVlHRM5HgQcMsd04MFjFEMfag8H3/LvXb/w
-         v20vxKmKNIrb1/aH/UOexAaBb1dXyx25DYsHhwjnpcucOsw5vastbNmgzllpxHz9ic9m
-         lDPw==
-X-Gm-Message-State: AOJu0Yw3IyGZzs7ywE45+5oAe9uK28PXZaJ/rhe7xsyALQ4L69+YSFmq
-	DDZs/zg0ORBRzIm1aBjJgyYiUzVLw9ghiVZyW3MfIBBVDFkmBVazT9HFscDjK27fwKw4JAFC/1f
-	imAV0lxMm67etx1rjRRUAz7BgWKGrVrqd0I1r3w==
-X-Google-Smtp-Source: AGHT+IEp+BCexpJJ6ohaF+JnwTJv7pW+tOMp/aILpD4z9Pnlsg7u0pF1hQAy5gFLv6j12xX3fQ7u0zchbJE1CikE61g=
-X-Received: by 2002:a05:600c:a42:b0:42c:baf1:4c7 with SMTP id
- 5b1f17b1804b1-42f7130754amr21824315e9.4.1727795893457; Tue, 01 Oct 2024
- 08:18:13 -0700 (PDT)
-Received: from 67733873971 named unknown by gmailapi.google.com with HTTPREST;
- Tue, 1 Oct 2024 08:18:12 -0700
 MIME-Version: 1.0
-from: squad_Finance Resource Group <rayayers740@gmail.com>
-Senders_Details: squad_Finance Resource Group:Sender_id:16KXXWUR0GCJ7YPZLWJRPJ:rayayers740@gmail.com
-Date: Tue, 1 Oct 2024 08:18:12 -0700
-Message-ID: <CAK4D6qLL5mQr2bJ84TxHzo-DZBOU0Nx0jeHabuqNwWoGFzj4oA@mail.gmail.com>
-Subject: Your Order Confirmation 16KXXWUR0GCJ7YPZLWJRPJ
-To: kamransaifullah786@gmail.com
-Content-Type: multipart/mixed; boundary="00000000000079a07006236bd435"
+Date: Mon, 7 Oct 2024 18:35:53 +0300
+Message-ID: <CAKQoVeFREOD4WU9-XY0NW7peXMbk5jz7c9UpRx_+ComV=GCBGQ@mail.gmail.com>
+Subject: Damn Phishing
+From: Kamran Saifullah <kamransaifullah786@gmail.com>
+To: Kamran Saifullah <kamransaifullah786@gmail.com>
+Content-Type: multipart/mixed; boundary="000000000000b658440623e4c651"
 
---00000000000079a07006236bd435
-Content-Type: multipart/alternative; boundary="00000000000079a06f06236bd433"
+--000000000000b658440623e4c651
+Content-Type: multipart/alternative; boundary="000000000000b6583f0623e4c64f"
 
---00000000000079a06f06236bd433
+--000000000000b6583f0623e4c64f
 Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
 
-The 16KXXWUR0GCJ7YPZLWJRPJ transaction has passed review and the funds are
-settled.
+IP: 34.243.87.115
+Another IP: 42.192.151.167
+Domain: http://0.fres-news.com
+Another Domain: http://1anddomailef.weebly.com
 
-Should you need help, just let me know.
-
-We=E2=80=99re thankful for your support and your recent payment.
-
---00000000000079a06f06236bd433
+--000000000000b6583f0623e4c64f
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<p>The 16KXXWUR0GCJ7YPZLWJRPJ transaction has passed review and the funds a=
-re settled.</p>
+<div dir=3D"ltr"><span class=3D"gmail-im" style=3D"color:rgb(80,0,80)"><div=
+>IP:=C2=A034.243.87.115</div><div>Another IP:=C2=A042.192.151.167</div></sp=
+an><div>Domain: http://<a href=3D"http://0.fres-news.com/" target=3D"_blank=
+">0.fres-news.com</a></div><div>Another Domain: http://<a href=3D"http://1a=
+nddomailef.weebly.com/" target=3D"_blank">1anddomailef.weebly.com</a></div>=
+</div>
 
-<p>Should you need help, just let me know.</p>
-
-<p>We=E2=80=99re thankful for your support and your recent payment.</p>
-
---00000000000079a06f06236bd433--
---00000000000079a07006236bd435
+--000000000000b6583f0623e4c64f--
+--000000000000b658440623e4c651
 Content-Type: application/pdf; name="2V513VSELMIR516KXL2G.pdf"
 Content-Disposition: attachment; filename="2V513VSELMIR516KXL2G.pdf"
 Content-Transfer-Encoding: base64
-X-Attachment-Id: 3f40a20af254868a_0.1
+X-Attachment-Id: f_m1z6c2yh0
+Content-ID: <f_m1z6c2yh0>
 
 JVBERi0xLjQKMSAwIG9iago8PAovVGl0bGUgKP7/KQovQ3JlYXRvciAo/v8AdwBrAGgAdABtAGwA
 dABvAHAAZABmACAAMAAuADEAMgAuADYpCi9Qcm9kdWNlciAo/v8AUQB0ACAANAAuADgALgA3KQov
@@ -4802,4 +4726,4 @@ MDAgbiAKMDAwMDAwMDI4OSAwMDAwMCBuIAowMDAwMjY2MjQ2IDAwMDAwIG4gCjAwMDAyNjYyNjgg
 MDAwMDAgbiAKMDAwMDI2NjYyNCAwMDAwMCBuIAowMDAwMjY2ODYwIDAwMDAwIG4gCjAwMDAyNjY0
 MzcgMDAwMDAgbiAKMDAwMDI2NjYwNCAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDEzCi9JbmZv
 IDEgMCBSCi9Sb290IDggMCBSCj4+CnN0YXJ0eHJlZgoyNjY5NzgKJSVFT0YK
---00000000000079a07006236bd435--
+--000000000000b658440623e4c651--
