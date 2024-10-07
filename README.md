@@ -18,7 +18,7 @@ The usage is pretty simple, all you need is to supply a `.EML` or `.MSG` file. T
 8. URLs (From the body)
 9. Attachments (Name is displayed)
 
-The attachments will be stored in the `/Uploads` folder. 
+The attachments will be stored in the `/Uploads` folder as well as the uploaded email files. 
 
 # Upcoming
 
